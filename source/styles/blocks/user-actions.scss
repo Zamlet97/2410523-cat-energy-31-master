@@ -1,0 +1,31 @@
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-bottom: 9px;
+
+  &__login,
+  &__register {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #68b738;
+    }
+  }
+
+  &__login {
+    &::before {
+      content: "👤 ";
+      font-size: 16px;
+    }
+  }
+
+  &__separator {
+    color: #cdcdcd;
+  }
+}

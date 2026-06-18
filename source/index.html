@@ -20,6 +20,7 @@
 <body>
   <header class="header">
     <nav class="navigation wrapper">
+
       <a class="navigation__logo logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo/logo-desktop.svg">
@@ -28,6 +29,11 @@
         </picture>
         <img class="logo__image-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип текст кот Energy">
       </a>
+      <div class="user-actions">
+        <a class="user-actions__login" href="login.html">Вход</a>
+        <span class="user-actions__separator">|</span>
+        <a class="user-actions__register" href="register.html">Регистрация</a>
+      </div>
       <button class="navigation__button-close navigation__button-open navigation__button-close--nojs" type="button">
         <span class="visually-hidden">Закрыть меню</span>
       </button>
@@ -44,7 +50,9 @@
           </li>
         </ul>
       </div>
+
     </nav>
+
   </header>
   <main class="main-wrapper">
     <section class="promo">
