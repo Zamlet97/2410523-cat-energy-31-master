@@ -1,0 +1,72 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.subscribe {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-dark;
+  text-align: center;
+  font-family: $secondary-font;
+  padding: 39px 0 36px;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 0 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 67px 0 0;
+  }
+}
+
+.subscribe__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 63px;
+    margin-top: 0;
+  }
+}
+
+.subscribe__title {
+  text-align: start;
+  margin: 0 0 32px;
+  position: relative;
+  width: fit-content;
+  background-color: $color-light;
+  box-shadow: -40px 0 0 0 $color-light, 40px 0 0 0 $color-light;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 67px;
+    font-size: 32px;
+    line-height: 32px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 0 72px;
+    padding-left: 110px;
+  }
+}
+
+.subscribe__description {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 600px;
+    margin: 0 auto 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 700px;
+  }
+}

@@ -1,0 +1,121 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.footer {
+  background-color: $color-light-primary;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 8%;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  gap: 17px;
+  justify-items: center;
+  padding: 20px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 57px 23px 40px 30px;
+    gap: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 64px 30px 80px;
+  }
+}
+
+.footer__logo-img {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__developer {
+
+  padding: 5px 8px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    width: 170px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.footer__developer-text {
+  display: flex;
+  align-items: center;
+  color: $color-dark-primary;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  gap: 139px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 163px;
+    gap: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+  }
+
+  &:hover::after {
+    background-color: $color-light-third;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__developer-text::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  background-color: $color-socials;
+  mask-image: url("/icons/stack.svg#developer");
+  mask-size: 27px 34px;
+  mask-position: center;
+  display: block;
+}
+
+.footer__logo {
+  padding: 22px 0 0;
+  justify-content: center;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

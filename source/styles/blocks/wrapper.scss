@@ -1,0 +1,21 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    padding: 0 30px;
+    max-width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    max-width: 1220px + 60;
+  }
+}

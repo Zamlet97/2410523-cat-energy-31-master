@@ -1,0 +1,217 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.programs__wrapper {
+  background-color: $color-light;
+  color: $color-dark;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-top: 82px;
+    margin-top: 189px;
+  }
+}
+
+.programs__card {
+  background-color: $color-light-secondary;
+  margin-bottom: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  grid-template-areas:
+    "before title"
+    "text   text"
+    "link   link";
+  align-items: start;
+  padding: 6px 19px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    grid-template-columns: 340px 1fr;
+    grid-template-areas:
+      "title before"
+      "text  before"
+      "link  before";
+    padding: 71px 63px 43px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 30px 56px 52px;
+  }
+}
+
+.programs__card--slim {
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: 69px;
+  }
+}
+
+.programs__card--slim::before {
+  content: "";
+  width: 50px;
+  height: 53px;
+  display: flex;
+  background-image: url("../../icons/stack.svg#cat-sitting");
+  background-position: center;
+  grid-area: before;
+  align-self: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 211px;
+    margin-left: auto;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 106px;
+    margin-bottom: 33px;
+  }
+}
+
+.programs__card--set {
+  @media (max-width: $max-mobile-width) {
+    padding: 9px 21px 9px 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: 7px;
+    padding: 79px 27px 35px 52px;
+  }
+}
+
+.programs__card-description-text {
+  min-width: 227px;
+  padding-left: 7px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 382px;
+    padding: 0;
+  }
+}
+
+.programs__card--set::before {
+  content: "";
+  width: 67px;
+  height: 50px;
+  display: block;
+  background-image: url("../../icons/stack.svg#cat-stand");
+  grid-area: before;
+  align-self: center;
+  background-repeat: no-repeat;
+  padding: 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    margin: 14px 0 48px 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+    margin: 0 0 44px -19px;
+  }
+}
+
+.programs__card-title {
+  font-size: 24px;
+  line-height: 37px;
+  grid-area: title;
+  justify-self: start;
+  color: $color-dark;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 35px 0 0 86px;
+  }
+}
+
+.programs__card-description {
+  grid-area: text;
+  margin: 6px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+    font-size: 15px;
+    max-width: 455px;
+  }
+}
+
+.programs__card-description::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.programs__card-link {
+  color: $color-dark;
+  line-height: 16px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  grid-area: link;
+  padding: 17px 2px 13px;
+  font-family: $secondary-font;
+
+  @media (min-width: $tablet-width) {
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 1px 4px;
+  }
+
+  &:hover::after {
+    width: 32px;
+    height: 12px;
+    mask-image: url("../../icons/stack.svg#cursor-hover");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $color-dark;
+    display: block;
+    transition: mask-position 3s linear;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.programs__card-link::after {
+  content: "";
+  mask-image: url("../../icons/stack.svg#cursor");
+  display: block;
+  width: 24px;
+  height: 12px;
+  background-color: $color-dark;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}

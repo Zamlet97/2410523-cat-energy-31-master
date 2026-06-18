@@ -1,0 +1,89 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.gift {
+  color: $color-dark;
+  line-height: 16px;
+  font-size: 20px;
+  background-image:
+    linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    image-set(url("../../images/background/background-cat-2-mob@1x.jpg") type("image/jpg") 1x,
+    url("../../images/background/background-cat-2-mob@2x.jpg")  type("image/jpg") 2x,
+    url("../../images/background/background-cat-2-desktop@1x.webp")  type("image/webp") 1x,
+    url("../../images/background/background-cat-2-mob@2x.webp") type("image/webp") 2x);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 290px;
+  background-size: auto 290px;
+  display: block;
+  padding: 18px 10px;
+  margin-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+    background-image:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set( url("../../images/background/background-cat-2-tabl@1x.jpg") type("image/jpg") 1x,
+      url("../../images/background/background-cat-2-tabl@2x.jpg") type("image/jpg") 2x,
+      url("../../images/background/background-cat-2-tabl@1x.webp") type("image/webp") 1x,
+      url("../../images/background/background-cat-2-tabl@2x.webp") type("image/webp") 2x);
+    background-size: auto 200px;
+    margin-top: 70px;
+    padding-top: 51px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    background-image:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(url("../../images/background/background-cat-2-desktop@2x.jpg") type("image/jpg") 2x,
+      url("../../images/background/background-cat-2-desktop@1x.jpg") type("image/jpg") 2x,
+      url("../../images/background/background-cat-2-desktop@1x.webp") type("image/webp") 1x,
+      url("../../images/background/background-cat-2-desktop@2x.webp") type("image/webp") 2x);
+    margin-left: auto;
+    background-size: auto 100%;
+    margin-top: 0;
+    height: 92%;
+  }
+}
+
+.gift-description {
+  text-align: center;
+  color: $color-light;
+  margin: 0;
+  max-width: 262px;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 592px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.gift-description::before {
+  content: "";
+  background-image: url("../../icons/stack.svg#gift");
+  width: 78px;
+  height: 80px;
+  display: block;
+  margin: 32px auto 48px;
+
+  @media (min-width: $tablet-width) {
+    background-position: left;
+    margin: 0 0 0 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 44px 55px;
+  }
+}

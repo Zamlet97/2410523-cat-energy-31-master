@@ -1,0 +1,14 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.header {
+  min-width: 320px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-top: 31px;
+  }
+}

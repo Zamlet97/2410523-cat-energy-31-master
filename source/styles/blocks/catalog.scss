@@ -1,0 +1,114 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.catalog {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+    padding-top: 17px;
+  }
+}
+
+.catalog__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $color-dark;
+  margin: 0 0 20px;
+  font-family: $secondary-font;
+  position: relative;
+  padding: 28px 0 20px 20px;
+  border-top: $border-light $color-hover-act;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 24px 0 24px 30px;
+    margin-bottom: 70px;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 0 30px;
+    margin-bottom: 89px;
+  }
+}
+
+
+.catalog__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 24px;
+  position: relative;
+
+
+  &::after {
+    @media (max-width: $max-mobile-width) {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      bottom: 0;
+      box-shadow: -100vw 0 0 0 #ebebeb;
+      overflow: hidden;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 60px;
+    justify-content: center;
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px 80px;
+    margin-bottom: 0;
+  }
+}
+
+.catalog__prices-title {
+  color: #111111;
+  font-size: 16px;
+}
+
+.catalog__item {
+  padding: 23px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+}
+
+.catalog__item:last-child::before {
+  @media (min-width: $tablet-width) {
+    background-color: $color-light;
+  }
+}
+
+.catalog__item-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 0 38px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    padding: 0;
+  }
+}

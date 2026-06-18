@@ -1,0 +1,47 @@
+.button {
+  border-style: none;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  min-width: 169px;
+  min-height: 40px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.button--primary {
+  color: $color-light;
+  background-color: $color-light-third;
+
+  &:hover {
+    background-color: $color-hover-but;
+  }
+
+  &:active {
+    background-color: $color-hover-but;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.button--secondary {
+  background-color: $color-light-primary;
+  color: $color-dark-primary;
+
+  &:hover,
+  &:active {
+    background-color: $color-hover-act;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

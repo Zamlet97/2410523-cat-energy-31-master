@@ -1,0 +1,14 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.title-h3 {
+  font-family: $secondary-font;
+  text-align: center;
+  font-weight: 400;
+  color: $color-dark-special;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+    font-size: 20px;
+  }
+}

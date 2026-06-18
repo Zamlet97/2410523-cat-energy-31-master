@@ -1,0 +1,56 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее */
+@use "mixins";
+@use "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+/** {
+  outline: 2px solid green;
+} */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-dark-primary;
+  background-color: $color-light;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+source,
+picture {
+  display: contents;
+}
+
+iframe {
+  width: 100%;
+  min-height: 100%;
+}
