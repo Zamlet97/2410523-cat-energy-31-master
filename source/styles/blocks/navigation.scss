@@ -60,12 +60,12 @@
     font-size: 18px;
     position: static;
     align-items: center;
-    margin-left: auto;
+    // margin-left: auto;
     display: flex;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: auto;
+    // margin-left: auto;
     position: static;
     min-width: 475px;
   }

@@ -12,3 +12,39 @@
     margin-top: 31px;
   }
 }
+
+// ===== Стили для иконки корзины в шапке =====
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto; // Прижимает корзину к правому краю
+  margin-right: 15px; // Отступ от бургера
+  text-decoration: none;
+  color: #000000;
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #68b738;
+    /* stylelint-disable-next-line color-named */
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+}
+
