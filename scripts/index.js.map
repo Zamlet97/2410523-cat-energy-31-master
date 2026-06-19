@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["source/scripts/index.js"],
-  "sourcesContent": ["/* \u0432 \u044D\u0442\u043E\u0442 \u0444\u0430\u0439\u043B \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043A\u0440\u0438\u043F\u0442\u044B*/\nconst navButton = document.querySelector('.navigation__button-close');\nconst navDiv = document.querySelector('.navigation__menu');\nconst map = document.querySelector('.contacts__map');\n\nnavButton.classList.remove('navigation__button-close--nojs');\nnavDiv.classList.remove('navigation__menu--nojs');\nmap.classList.remove('contacts__map--nojs');\n\n"],
-  "mappings": ";AACA,IAAM,YAAY,SAAS,cAAc,2BAA2B;AACpE,IAAM,SAAS,SAAS,cAAc,mBAAmB;AACzD,IAAM,MAAM,SAAS,cAAc,gBAAgB;AAEnD,UAAU,UAAU,OAAO,gCAAgC;AAC3D,OAAO,UAAU,OAAO,wBAAwB;AAChD,IAAI,UAAU,OAAO,qBAAqB;",
-  "names": []
-}
