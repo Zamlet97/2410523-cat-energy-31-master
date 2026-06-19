@@ -1,9 +1,29 @@
-/* в этот файл добавляет скрипты*/
-const navButton = document.querySelector('.navigation__button-close');
-const navDiv = document.querySelector('.navigation__menu');
-const map = document.querySelector('.contacts__map');
+document.addEventListener('DOMContentLoaded', () => {
+  // ========== БУРГЕР-МЕНЮ ==========
+  const burgerButton = document.querySelector('.navigation__button-close');
+  const navMenu = document.querySelector('.navigation__menu');
 
-navButton.classList.remove('navigation__button-close--nojs');
-navDiv.classList.remove('navigation__menu--nojs');
-map.classList.remove('contacts__map--nojs');
+  if (burgerButton && navMenu) {
+    // Открытие/закрытие по клику на кнопку
+    burgerButton.addEventListener('click', function() {
+      // Переключаем класс для меню
+      navMenu.classList.toggle('navigation__menu--open');
+      navMenu.classList.toggle('navigation__menu--close');
 
+      // Меняем текст кнопки
+      const isOpen = navMenu.classList.contains('navigation__menu--open');
+      this.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+
+    // Закрытие меню по клику на ссылку
+    const navLinks = navMenu.querySelectorAll('.navigation__menu-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('navigation__menu--open');
+        navMenu.classList.add('navigation__menu--close');
+        burgerButton.textContent = '☰';
+        burgerButton.setAttribute('aria-label', 'Открыть меню');
+      });
+    });
+  }
+});

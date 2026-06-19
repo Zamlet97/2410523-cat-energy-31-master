@@ -1,4 +1,6 @@
+// source/js/script.js
 document.addEventListener('DOMContentLoaded', () => {
+  // ========== КОД ДЛЯ ВАЛИДАЦИИ ФОРМЫ ==========
   const registerForm = document.querySelector('.auth-form');
   if (registerForm) {
     registerForm.addEventListener('submit', function(e) {
@@ -8,11 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (password && confirm && password.value !== confirm.value) {
         e.preventDefault();
-        errorElement.style.display = 'block'; // Показываем ошибку
+        errorElement.style.display = 'block';
         confirm.style.borderColor = '#ff0000';
         password.style.borderColor = '#ff0000';
       } else {
-        // Скрываем ошибку, если всё хорошо
         if (errorElement) {
           errorElement.style.display = 'none';
         }
