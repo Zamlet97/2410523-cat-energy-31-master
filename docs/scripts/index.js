@@ -1,8 +1,1 @@
-// source/scripts/index.js
-var navButton = document.querySelector(".navigation__button-close");
-var navDiv = document.querySelector(".navigation__menu");
-var map = document.querySelector(".contacts__map");
-navButton.classList.remove("navigation__button-close--nojs");
-navDiv.classList.remove("navigation__menu--nojs");
-map.classList.remove("contacts__map--nojs");
-//# sourceMappingURL=index.js.map
+document.addEventListener("DOMContentLoaded",()=>{let t=document.querySelector(".navigation__button-close"),n=document.querySelector(".navigation__menu");t&&n&&(t.addEventListener("click",function(){n.classList.toggle("navigation__menu--open"),n.classList.toggle("navigation__menu--close");let e=n.classList.contains("navigation__menu--open");this.setAttribute("aria-label",e?"\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E":"\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E")}),n.querySelectorAll(".navigation__menu-link").forEach(e=>{e.addEventListener("click",()=>{n.classList.remove("navigation__menu--open"),n.classList.add("navigation__menu--close"),t.textContent="\u2630",t.setAttribute("aria-label","\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0435\u043D\u044E")})}))});
