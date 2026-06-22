@@ -1,0 +1,65 @@
+.page-title {
+  font-size: 36px;
+  line-height: 60px;
+  color: #111111;
+  font-weight: inherit;
+  font-family: $secondary-font;
+  margin: 0;
+  margin-bottom: 28px;
+  padding-top: 15px;
+
+  &--form {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    margin-top: 38px;
+    margin-bottom: 80px;
+    font-size: 60px;
+    line-height: 60px;
+
+    &--form {
+      margin-left: -42px;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    margin-top: 54px;
+  }
+
+  .page-title--form {
+    margin-left: 0;
+  }
+}
+
+.page-description {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: inherit;
+  color: #111111;
+  margin: 0;
+  margin-bottom: 19px;
+  padding-right: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    width: 350px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    margin-bottom: 66px;
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Energy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="icon" href="favicons/192.png">
+  <link rel="icon" href="favicons/512.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navigation wrapper">
+      <a class="navigation__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo/logo-tablet.svg">
+          <img class="logo__image" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип кота Energy">
+        </picture>
+        <img class="logo__image-text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип текст кот Energy">
+      </a>
+      <a class="cart-link" href="cart.html" id="cartLink" aria-label="Корзина">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 18C5.89543 18 5 18.8954 5 20C5 21.1046 5.89543 22 7 22C8.10457 22 9 21.1046 9 20C9 18.8954 8.10457 18 7 18Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M17 18C15.8954 18 15 18.8954 15 20C15 21.1046 15.8954 22 17 22C18.1046 22 19 21.1046 19 20C19 18.8954 18.1046 18 17 18Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1 1H5L7 13H19L23 5H6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="navigation__button-close navigation__button-open" type="button">
+        <span class="visually-hidden">Закрыть меню</span>
+      </button>
+
+      <div class="navigation__menu navigation__menu--close">
+        <ul class="navigation__menu-list">
+          <li class="navigation__menu-item">
+            <a class="navigation__menu-link navigation__menu-link--dark " href="index.html">Главная</a>
+          </li>
+          <li class="navigation__menu-item">
+            <a class="navigation__menu-link navigation__menu-link--dark" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation__menu-item">
+            <a class="navigation__menu-link navigation__menu-link--current-secondary  navigation__menu-link--dark" href="form-page.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-wrapper">
+    <form class="form-page" action="http://echo.htmlacademy.ru" method="post">
+      <div class="form-page__container wrapper">
+        <h1 class="page-title page-title--form-page">Подбор программы</h1>
+        <p class="page-description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="form-page__cats-controls">
+          <div class="form-page__cats-info">
+            <div class="form-page__inner">
+              <label class="form-page__label" for="cat-name">Имя:*</label>
+              <input class="form-page__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            </div>
+            <div class="form-page__inner">
+              <label class="form-page__label form-page__label--weight" for="cat-weight">Вес&nbsp;(кг):*</label>
+              <input class="form-page__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
+            </div>
+            <div class="form-page__inner">
+              <label class="form-page__label form-page__label--age" for="cat-age">Возраст&nbsp;(лет):</label>
+              <input class="form-page__input" id="cat-age" type="number" name="cat-age" placeholder="7">
+            </div>
+          </div>
+          <div class="form-page__program">
+            <input class="visually-hidden form-page__radio" id="weight-loss" type="radio" name="cat-program" value="weight-loss" checked>
+            <label class="form-page__label form-page__label--radio" for="weight-loss">Похудение</label>
+            <input class="visually-hidden form-page__radio" id="weight-gain" type="radio" name="cat-program" value="weight-gain">
+            <label class="form-page__label form-page__label--radio" for="weight-gain">Набор массы</label>
+            <input class="visually-hidden form-page__radio" id="advice" type="radio" name="cat-program" value="advice">
+            <label class="form-page__label form-page__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
+          </div>
+        </div>
+      </div>
+      <section class="form-page__wrapper">
+        <div class="form-page__container wrapper">
+          <h2 class="form-page__title">Контактные&nbsp;данные (владельца&nbsp;кота)</h2>
+          <div class="form-page__owner-data">
+            <div class="form-page__inner">
+              <label class="form-page__label form-page__label--email" for="owner-email">E&#8209;mail:*</label>
+              <input class="form-page__input form-page__input--email" id="owner-email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+              <div class="form-page__icon">
+                <svg class="form-page__svg form-page__svg--email" width="17" height="17">
+                  <use xlink:href="#sprite-icon-mail"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-page__inner form-page__inner-icon ">
+              <label class="form-page__label form-page__label--phone" for="owner-phone">Телефон:*</label>
+              <input class="form-page__input form-page__input--phone" id="owner-phone" type="tel" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+              <div class="form-page__icon">
+                <svg class="form-page__svg form-page__svg--phone" width="20" height="20">
+                  <use xlink:href="#sprite-icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form-page__wrapper form-page__wrapper--comment">
+        <div class="form-page__container wrapper">
+          <h2 class="form-page__title">Комментарий</h2>
+          <textarea class="form-page__input form-page__input--comment" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
+      </section>
+      <!-- <section class="form-page__wrapper form-page__wrapper--add">
+        <div class="form-page__container wrapper">
+          <h2 class="form-page__title form-page__title--add">Дополнительно</h2>
+          <div class="form-page__extra">
+            <div class="form-page__extra-block">
+              <input class="visually-hidden form-page__checkbox" id="sweetener" type="checkbox" name="sweetener" checked>
+              <label class="form-page__label form-page__label--checkbox" for="sweetener">Сахарозаменитель</label>
+            </div>
+            <div class="form-page__extra-block">
+              <input class="visually-hidden form-page__checkbox" id="water" type="checkbox" name="water">
+              <label class="form-page__label form-page__label--checkbox" for="water">Питьевая вода</label>
+            </div>
+            <div class="form-page__extra-block">
+              <input class="visually-hidden form-page__checkbox" id="milk" type="checkbox" name="milk">
+              <label class="form-page__label form-page__label--checkbox" for="milk">Молоко</label>
+            </div>
+            <div class="form-page__extra-block">
+              <input class="visually-hidden form-page__checkbox" id="vitamins" type="checkbox" name="vitamins">
+              <label class="form-page__label form-page__label--checkbox" for="vitamins">Витамины</label>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <div class="form-page__action form-page__container wrapper">
+        <button class="form-page__btn button button--primary" type="submit">Отправить заявку</button>
+        <b class="form-page__prompt">* — Обязательные поля</b>
+      </div>
+    </form>
+    <section class="contacts">
+      <div class="contacts__wrapper wrapper">
+        <div class="contacts__content">
+          <h2 class="visually-hidden">Адрес для сотрудничества</h2>
+          <p class="contacts__description title-h3">приглашаем<br> на учебу<br> абитуриентов!</p>
+          <address class="contacts__text">ул. Андрея<br>
+            Блаженного, д. 3<br>
+            <span>Ульяновск</span>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map contacts__map--nojs">
+        <noscript>
+          <picture>
+            <source media="(min-width:1440px)" width="1440" height="400" type="image/webp" srcset="images/map/map-desktop@1x.webp 1x,  images/map/map-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="768" height="400" type="image/webp" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x ">
+            <img class="contacts__map-image" src="images/map/map-mobile@2x.png" srcset="images/map/map-mobile@1x.png 1x, images/map/map-mobile@2x.png 2x" width="320" height="362" alt="метка на карте для сотрудничества">
+          </picture>
+        </noscript>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.2694765022256!2d48.38843295312191!3d54.31507281234184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415d3714c85242d5%3A0xf34602135e5a0db4!2z0JrQvtC70LvQtdC00LYg0Y3QutC-0L3QvtC80LjQutC4INC4INC40L3RhNC-0YDQvNCw0YLQuNC60Lgg0LjQvC4g0JAu0J0uINCQ0YTQsNC90LDRgdGM0LXQstCw!5e0!3m2!1sru!2sru!4v1781868641111!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper wrapper">
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-img" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип текст кот Energy">
+      </a>
+      <ul class="socials">
+        <li class="socials__item">
+          <a class="socials__link socials__link--vk" href="https://vk.com/kei_ulstu" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer__developer" href="#">
+        <span class="footer__developer-text">by Emil Zamaletdinov</span>
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
