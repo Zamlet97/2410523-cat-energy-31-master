@@ -153,19 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const checkoutButton = document.getElementById('checkoutButton');
   if (checkoutButton) {
     checkoutButton.addEventListener('click', () => {
-      if (Object.keys(cart).length === 0) {
+      const items = Object.keys(cart).filter((key) => cart[key] > 0);
+      if (items.length === 0) {
         alert('Корзина пуста!');
         return;
       }
 
-      // Показываем сообщение
-      alert('🎉 Заказ оформлен! Спасибо за покупку!');
-
-      // Очищаем корзину
-      Object.keys(cart).forEach((key) => delete cart[key]);
-      localStorage.setItem('catEnergyCart', JSON.stringify(cart));
-      renderCart();
-      updateCartBadge();
+      // Переход на страницу оплаты
+      window.location.href = 'payment.html';
     });
   }
 

@@ -16,7 +16,7 @@
   }
 }
 
-.product-card:not(:last-child) {
+.product-card {
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(#ffffff 14%, #f2f2f2 0%);
   }
