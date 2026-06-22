@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('navigation__menu--open');
         navMenu.classList.add('navigation__menu--close');
-        burgerButton.textContent = '☰';
         burgerButton.setAttribute('aria-label', 'Открыть меню');
       });
     });

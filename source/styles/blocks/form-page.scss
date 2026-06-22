@@ -148,6 +148,12 @@
   border: 1px solid #d9d9d9;
   width: 75%;
 
+  &--name {
+    @media (min-width: $desktop-width) {
+      width: 70%;
+    }
+  }
+
   &:hover {
     border-color: #cdcdcd;
   }
@@ -345,6 +351,10 @@
 
     &--email {
       margin-right: 18px;
+    }
+
+    &--name {
+      margin-right: 8px;
     }
 
     &--phone {
